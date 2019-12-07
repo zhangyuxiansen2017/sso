@@ -1,0 +1,14 @@
+server:
+  port: 8090
+  context-path: /client
+
+security:
+  oauth2:
+    client:
+      client-id: zgm-02
+      client-secret: secret-02
+      user-authorization-uri: http://127.0.0.1:9999/server/oauth/authorize
+      access-token-uri: http://127.0.0.1:9999/server/oauth/token
+    resource:
+      jwt:
+        key-uri: http://127.0.0.1:9999/server/oauth/token_key
